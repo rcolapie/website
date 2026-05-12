@@ -1,0 +1,67 @@
+project:
+  type: website
+  #output-dir: docs
+  resources:
+    - sitemap.xml
+ 
+execute:
+  freeze: auto
+ 
+website:
+  title: "Roberta Colapietro"
+  site-url: https://robertacolapietro.com/
+  favicon: img/brush.png
+  
+  navbar:
+    pinned: true
+    logo: assets/img/brush.png ## DOVREBBE ESSERE IN WEBP https://github.com/jadeynryan/jadey_website/blob/main/404.qmd
+    left:
+      - icon: clock-fill
+        text: "Research"
+        href: content/research.qmd
+      - icon: megaphone-fill
+        text: "Scicomm"
+        href: content/scicomm.qmd
+      - icon: chat-dots-fill
+        text: "Contact"
+        href: content/contact.qmd
+ 
+    right:
+      - text: "{{< fa brands bluesky >}}" # Use FontAwesome icons
+        href: https://bsky.app/profile/robertacolapie.bsky.social
+        target: _blank # Open link in a new browser tab
+      - text: "{{< fa brands instagram >}}"
+        href: https://www.instagram.com/robertacolapie/
+        target: _blank
+      - text: "{{< fa brands linkedin >}}"
+        href: https://www.linkedin.com/in/roberta-colapietro/
+        target: _blank
+      - text: "{{< fa brands google-scholar >}}"
+        href: https://scholar.google.com/citations?user=bodLEn4AAAAJ&hl=en
+        target: _blank
+ 
+  page-footer: 
+    right: "Made with 🩷 and [Quarto](https://quarto.org/)"
+    left: |
+      <div>&copy; Copyright 2026, Roberta Colapietro</div>
+ 
+format:
+  html:
+    theme: custom.scss # Do not use the default Bootswatch styles
+    toc: true
+    toc-depth: 3
+    include-in-header:
+        - text: |
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    navigation:
+      sidebar: false
+    meta:
+      description: "Personal website of Roberta Colapietro"
+      author: "Roberta Colapietro"
+      keywords: ["Roberta Colapietro", "bioinformatics", "circadian", "circadian biology", "science illustration", "science communication"]
+ 
+filters:
+  - fontawesome
+  - iconify
+ 
+editor: source

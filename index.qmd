@@ -1,0 +1,20 @@
+---
+title: ""
+title-block-banner: false
+include-after-body:
+  text: |
+    <style>
+      #quarto-margin-sidebar {
+        visibility: hidden;
+      }
+    </style>
+---
+
+# Roberta Colapietro
+
+<br>
+
+<img src="img/main.png" style="width: 40%; aspect-ratio: 1 / 1; border-radius: 50%; float: left; margin-right: 40px;"/>
+
+I am a PhD student at the [Charité Medical University](https://www.charite.de/en/) where I explore how cells keep track of time in health and disease. <br><br>
+I also love make this (and other) research topics accessible to the public through a variety of science outreach formats. <br><br> 

@@ -1,0 +1,27 @@
+---
+title: ""
+page-layout: article
+format:
+  html:
+    toc: false
+    body-classes: page-contact
+---
+
+## Get in Touch
+
+**I would love to connect!**
+
+If you have questions, ideas for collaboration, or want to chat, here’s how to find me. 
+
+### Email
+
+- 📧 [Email me at work](mailto:roberta.colapietro@charite.de)  
+- 🙋 [Email me personally](mailto:colapietro226@gmail.com)
+
+### Connect with me on Social Media!
+
+<div class="social-icons">
+  <a href="https://www.linkedin.com/in/roberta-colapietro/" aria-label="LinkedIn">{{< fa brands linkedin >}}</a>
+  <a href="https://bsky.app/profile/robertacolapie.bsky.social" aria-label="Bluesky">{{< fa brands bluesky >}}</a>
+  <a href="https://www.instagram.com/robertacolapie/" aria-label="Instagram">{{< fa brands instagram >}}</a>
+</div>
