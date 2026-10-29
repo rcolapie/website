@@ -1,13 +1,7 @@
 ---
-title: ""
+title: "Get in Touch!"
 page-layout: article
-format:
-  html:
-    toc: false
-    body-classes: page-contact
 ---
-
-## Get in Touch
 
 **I would love to connect!**
 

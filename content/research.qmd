@@ -1,8 +1,6 @@
 ---
-title: ""
+title: "Research"
 page-layout: article
 ---
-
-## Research
 
 Coming soon!

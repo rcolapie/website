@@ -1,59 +1,41 @@
 ---
-title: ""
+title: "Science Communication"
 page-layout: article
 toc: true
 toc-location: right
 toc-title: "Contents"
-toc-depth: 3
+toc-depth: 2
 ---
 
-## Science Communication 
+I strongly believe that doing good science is just as important as sharing it with the public. As a science communicator, I experiment with different formats to share scientific knowledge.
 
-I strongly believe that doing good science is just as important as sharing it with the public. As a science communicator, I experiment with different formats to share scientific knowledge. 
-<br>
+## Workshops for kids
 
-### Science fairs
+This is the format I started with as a student at the [University of Pavia](https://en.unipv.it/en), demonstrating experiments about the human body at [Indiscienza](https://www.instagram.com/indiscienza/), a student-organized science fair. Later, I came back to this format by organizing workshops for Italian children in Germany with the association [Native Scientist](https://www.nativescientist.com/), and workshops in German for local children as part of the [KinderUni](https://kinderuni.uni-koeln.de/) at the University of Cologne.
 
-<div style="overflow: auto;">
+## Talks
 
-<img src="../img/scifairs.jpg" style="width: 40%; float: left; margin-right: 40px;"/>
-
-<p>
-This is the format I started with, while a students at the University of Pavia (in another hair-era), demonstrating experiments connected with the human body for the student-organized fair Indiscienza. I then organized a workshop for Italian kids in Cologne with Indiscienza and I am engaged with the Kinderuni.
-</p>
-
-</div>
-
-### Videos
-
-We tried it only once with friends. But others to come soon! 
-
-[Stop motion about antibiotic resistance](https://youtu.be/xVcE1aprsjQ)
-Italian only. Same people as before (science fair)
-
-### Science Slams
-
-These are science slams because there is the video. But I have been involved in a lot of other things, from skype a scientist, pub talks. Let me know if you would like to speak me at an event. 
+I have given talks about my research in many settings, from [Skype a Scientist](https://www.skypeascientist.com/) sessions to pub talks, and in different languages, from Italian to German. Below you can find videos of some of the science slams I took part in.<br>[Get in touch](contact.qmd) if you would like me to speak at your event!
 
 ```{=html}
 <div class="video-gallery">
 
   <div class="video-tile">
-    <iframe src="https://www.youtube.com/embed/xUwFYeNcl9o?si=7T0_nnl81HaNdWrq"
+    <iframe title="Science slam video 1" src="https://www.youtube.com/embed/xUwFYeNcl9o?si=7T0_nnl81HaNdWrq"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
   
   <div class="video-tile">
-    <iframe src="https://www.youtube.com/embed/-FFBiwrFrwg?si=RafmJWI7U_SyubiR"
+    <iframe title="Science slam video 2" src="https://www.youtube.com/embed/-FFBiwrFrwg?si=RafmJWI7U_SyubiR"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
   
   <div class="video-tile">
-    <iframe src="https://www.youtube.com/embed/911BPimobVM?si=sKJA2AejObatw8Cp"
+    <iframe title="Science slam video 3" src="https://www.youtube.com/embed/911BPimobVM?si=sKJA2AejObatw8Cp"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -62,31 +44,69 @@ These are science slams because there is the video. But I have been involved in 
 </div>
 ```
 
-### Illustrations
+## Illustrations
 
-Below you can find a selection of illustrations I've created for different projects, both with analogical medium, and digital and vector based.
-<br><br>
-Contact me if you are interested in a **custom commission** (graphical abstracts, favicons, logos, or visuals for websites and talks). 
+Below you can find a selection of illustrations I have created for different projects, both with traditional media and digitally.<br>
+[Get in touch](contact.qmd) if you are interested in a custom commission (graphical abstracts, logos, or visuals for websites and talks).
 
 ```{=html}
 <div class="modular-gallery">
-  <img src="../img/illustrations/vangogh.png" class="tile big" alt = "A reinterpreted version of Van Gogh's sunflowers with mitochondria instead of petals">
-  <img src="../img/illustrations/advent.png" class="tile big">
-  <img src="../img/illustrations/mitos.png" class="tile rectangle">
-  <img src="../img/illustrations/day.png" class="tile big">
-  <img src="../img/illustrations/clock.png" class="tile big">
+
+  <figure class="tile-wrap">
+    <img src="../img/illustrations/vangogh.png" class="tile square framed" alt="A digital painting in the style of Van Gogh's Sunflowers: a vase of flowers against a turquoise wall, where every petal is drawn as a mitochondrion with folded inner membranes, some red and some yellow.">
+    <figcaption>Submitted cover art for <a href="https://www.nature.com/articles/s42255-025-01332-8" target="_blank" rel="noopener">Kaul et al. 2025</a></figcaption>
+  </figure>
+
+  <figure class="tile-wrap">
+    <img src="../img/illustrations/advent.png" class="tile square framed" alt="Watercolor Advent wreath drawn as a mitochondrial membrane, with four candles numbered I to IV like the complexes of the electron transport chain, an ATP synthase made of cinnamon sticks and an orange, holly berries marked P, and an electron bauble. Proton (H+) baubles hang above, and “Merry Xmas” is written in the middle.">
+    <figcaption aria-hidden="true">Electron transport wreath for a mitochondria-themed Christmas postcard</figcaption>
+  </figure>
+
+  <figure class="tile-wrap rectangle">
+    <img src="../img/illustrations/mitos.png" class="tile framed" alt="A strip of cartoon orange mitochondria, each acting out a pun on the word: kite-ochondria flying a kite, fight-ochondria boxing, spy-tochondria in a trench coat, night-ochondria as a crescent moon, fright-ochondria screaming in Munch's painting, Zeit-ochondria as a clock, byte-ochondria as binary digits, and many more.">
+    <figcaption aria-hidden="true">Mitochondria come in different shapes and flavors</figcaption>
+  </figure>
+
+  <figure class="tile-wrap">
+    <img src="../img/illustrations/day.png" class="tile square" alt="Circular poster showing the times of day: a house on a green hill under a sunny sky at the top, mirrored upside down at night below under a moon and stars, with a pale dawn on the left and a pink sunset on the right.">
+    <figcaption aria-hidden="true">Poster for an activity sorting animals into diurnal, nocturnal and crepuscular species</figcaption>
+  </figure>
+
+  <figure class="tile-wrap">
+    <img src="../img/illustrations/clock.png" class="tile square" alt="Watercolor clock drawn as a cell: the rim is a membrane, and the gears are organelles such as a mitochondrion, turned by blue clock hands.">
+    <figcaption aria-hidden="true">Watercolor reinterpretation of the cellular clock machinery</figcaption>
+  </figure>
+
+</div>
+```
+
+## Video
+
+This was a one-off, but a lot of fun! Together with other science communication enthusiasts from the association [Indiscienza](https://www.instagram.com/indiscienza/), I made a stop-motion video (in Italian) about antibiotic resistance, which won the [Italian National Prize for Science Outreach](https://www.premiodivulgazionescientifica.it/la-quindicina-del-premio-nazionale-di-divulgazione-scientifica-2020/) in the category "Short videos".
+
+```{=html}
+<div class="video-single">
+  <div class="video-tile">
+    <iframe title="Stop-motion video on antibiotic resistance (in Italian)" src="https://www.youtube.com/embed/xVcE1aprsjQ?si=5Xhz4qdap8h73fvr"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>
 ```
 
 <br><br>
-© Roberta Colapietro, 2026. All works in this page are licensed under a [Creative Commons Attribution-NonDerivative-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0). <br> This means you’re welcome to share anything from this page for non-commercial purposes as long as you credit me as the creator!
 
-<div id="img-popup" class="img-popup hidden">
+::: {.license-note}
+© Roberta Colapietro, 2026. All works on this page are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). <br> This means you're welcome to share anything from this page for non-commercial purposes, as long as you credit me as the creator and don't modify it!
+:::
+
+<div id="img-popup" class="img-popup d-none" role="status">
   <p>
     Want a high-res version or a custom illustration?<br>
-    <a href="contact.qmd">Contact me here️!</a>
+    <a href="contact.qmd">Contact me here!</a>
   </p>
-  <span class="close-popup">×</span>
+  <button type="button" class="close-popup" aria-label="Close">×</button>
 </div>
 
 <script>
@@ -96,17 +116,17 @@ Contact me if you are interested in a **custom commission** (graphical abstracts
   document.addEventListener("contextmenu", function(e) {
     if (e.target.tagName === "IMG") {
       e.preventDefault();
-      popup.classList.remove("hidden");
+      popup.classList.remove("d-none");
     }
   });
 
   closeBtn.addEventListener("click", function() {
-    popup.classList.add("hidden");
+    popup.classList.add("d-none");
   });
 
   document.addEventListener("click", function(e) {
     if (!popup.contains(e.target)) {
-      popup.classList.add("hidden");
+      popup.classList.add("d-none");
     }
   });
 </script>

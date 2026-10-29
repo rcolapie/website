@@ -25,61 +25,61 @@ $theme-colors: (
 );
  
 $headings-font-family: "Fredoka", sans-serif;
-$text-font-family:     "Albert Sans", sans-serif;
- 
-/*-- scss:uses --*/
- 
+$font-family-sans-serif: "Albert Sans", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100..800&family=Fredoka:wght@300..700&display=swap');
  
 /*-- scss:rules --*/
- 
+
+/* Base text style — all pages (font comes from $font-family-sans-serif) */
 body {
-  font-family: "Albert Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: justify;
   color: $body-color;
   background-color: $body-bg;
 }
- 
+
+/* Quarto's main content container — all pages */
 .content {
-  width: 95%;
-  margin: 0 5%;
+  width: 90%;
+  margin: 0 auto;
   padding: 0 10px;
 }
- 
+
+/* Headings — all pages (font comes from $headings-font-family) */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fredoka", sans-serif !important;
   color: $dark;
   text-align: left;
 }
- 
+
+/* Space between navbar and page title — all pages with a title (not index) */
+#title-block-header {
+  margin-top: 2rem;
+}
+
+/* Animated highlight on links inside paragraphs — all pages
+   (switched off inside .social-icons).
+   Drawn as a background so it follows the text when a link wraps onto
+   several lines: a thin bar that grows to cover the link on hover. */
 p a {
   text-decoration: none;
   color: $secondary;
   font-weight: 500;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
- 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    width: 100%;
-    height: 4px;
-    background-color: hsla(340, 100%, 90%, 0.75);
-    z-index: -1;
-    transition: all .3s ease-in-out;
-  }
- 
-  &:hover::before {
-    bottom: 0;
-    height: 100%;
+  background-image: linear-gradient(hsla(340, 100%, 90%, 0.75), hsla(340, 100%, 90%, 0.75));
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  background-position: 0 calc(100% - 5px);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size .3s ease-in-out, background-position .3s ease-in-out;
+
+  &:hover {
+    background-size: 100% 100%;
+    background-position: 0 100%;
   }
 }
- 
+
+/* Inline code — not used on any page yet, kept for future content */
 :not(pre) > code {
   background-color: $light !important;
   color: $dark !important;
@@ -89,37 +89,34 @@ p a {
   border-radius: 6px;
   white-space: nowrap;
 }
- 
-.column-margin {
-  clear: both;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
- 
+
+/* Top navigation bar, defined in _quarto.yml — all pages */
 .navbar {
   background-color: $primary;
   font-family: $headings-font-family;
   font-size: 1.3rem;
   font-weight: 500;
-  
+
   a {
     color: $body-bg;
     transition: color 0.5s ease;
-    
-      &:active {
-  color: white;
-  }
-    
+
+    &:active {
+      color: white;
+    }
+
     &:hover {
       color: $pop;
     }
   }
 }
 
+/* Spacing between navbar links — all pages */
 .navbar-nav .nav-item {
   margin: 0 0.5rem;
 }
- 
+
+/* Styled quotes — not used on any page yet, kept for future content */
 blockquote {
   margin: 2.5rem 0;
   padding: 1rem 1.5rem 1rem 2rem;
@@ -127,7 +124,7 @@ blockquote {
   background-color: rgba($secondary, 0.03);
   border-radius: 0 8px 8px 0;
   position: relative;
- 
+
   p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -136,7 +133,7 @@ blockquote {
     margin-bottom: 0.5rem;
     font-weight: 300;
   }
- 
+
   cite {
     display: block;
     font-size: 0.85rem;
@@ -145,88 +142,219 @@ blockquote {
     letter-spacing: 1px;
     color: $secondary;
     text-align: right;
- 
+
     &::before {
       content: "— ";
     }
   }
 }
- 
+
+/* Large social media icons — contact.qmd only */
 .social-icons {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
-  
+
   a {
     margin: 0 15px;
     color: $pop;
     font-size: 85px;
     transition: color 0.3s ease;
- 
-    &::before {
-      display: none !important;
-      content: none !important;
-    }
- 
+
+    /* No link highlight on the icons */
+    background-image: none;
+
     &:hover {
       color: $secondary;
-      /* Ensure the hover underline doesn't reappear */
-      &::before {
-        display: none !important;
-      }
     }
   }
 }
- 
-/* About Me */
-.about-me-img {
-  width: 250px;
-  height: 250px;
+
+/* Copyright and license notice at the end of the page — scicomm.qmd only */
+.license-note {
+  font-size: 0.85em;
+}
+
+/* Highlighted role words — index.qmd only */
+.role {
+  color: $secondary;
+  font-weight: 700;
+}
+
+/* Highlighted name in the greeting — index.qmd only */
+.name-highlight {
+  color: $primary;
+  background: linear-gradient(transparent 60%, rgba($pop, 0.5) 60%);
+  padding: 0 0.1em;
+}
+
+/* Photo credit under the portrait — about.qmd only */
+.photo-credit {
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgba($dark, 0.6);
+  margin-top: 0.4rem;
+}
+
+/* Circular portrait with border — index.qmd only */
+.home-img {
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid $pop;
+  margin-top: 1.5rem;
 }
- 
-/* Video gallery grid — separate from the illustration gallery */
+
+/* About page layout: photo in the left third, all text in the right two thirds
+   — about.qmd only (page uses page-layout: full so the text isn't squeezed) */
+.about-me {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+/* Figure holding the portrait and its photo credit — about.qmd only */
+.about-me-figure {
+  flex: 0 0 33%;   /* left third of the page, never shrinks */
+  margin: 1rem 0 0;
+}
+
+/* Text column next to the portrait — about.qmd only */
+.about-me-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* About page portrait: original shape, with border — about.qmd only */
+.about-me-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid $pop;
+}
+
+/* Grid of science slam videos (Talks section) — scicomm.qmd only */
 .video-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
   margin: 2em auto;
 }
- 
-/* Gallery */
+
+/* Illustration grid: two squares per row, rectangles span the full row
+   — scicomm.qmd only */
 .modular-gallery {
+  container-type: inline-size;   /* lets .tile.square size itself from the gallery width */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 300px;
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
   margin: 4em auto;
 }
- 
+
+/* Illustration images inside .modular-gallery — scicomm.qmd only.
+   .square = half-row tile: all share the same height (one column width) and keep
+   their own proportions, so the hover caption matches the image width.
+   .framed = drop shadow */
 .tile {
   width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
   background-color: transparent;
-  transition: transform 0.2s ease;
-  
-  &:hover { transform: scale(1.03); }
-  &.big { grid-column: span 2; grid-row: span 2; }
-  &.rectangle { grid-column: 1 / -1; grid-row: span 1; }
+
+  &.square {
+    width: auto;
+    max-width: 100%;
+    height: calc((100cqw - 32px) / 2);   /* 32px = gallery gap */
+  }
+  &.framed { filter: drop-shadow(0 4px 12px rgba($dark, 0.25)); }
 }
- 
+
+/* Figure wrapper around each illustration, caption appears on hover
+   (.rectangle = spans the full row) — scicomm.qmd only */
+.tile-wrap {
+  position: relative;
+  margin: 0;
+  transition: transform 0.2s ease;
+
+  /* Zoom the whole figure (image + caption) so the caption stays as wide
+     as the image */
+  &:hover { transform: scale(1.03); }
+
+  &.rectangle { grid-column: 1 / -1; }
+
+  /* Half-row figures shrink to their image and sit centered in the column */
+  &:not(.rectangle) { justify-self: center; }
+
+  .tile { display: block; }
+
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 1rem;
+    background: rgba($dark, 0.8);
+    color: $body-bg;
+    font-size: 0.9rem;
+    text-align: left;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover figcaption { opacity: 1; }
+
+  /* Links in captions (e.g. Kaul et al.) */
+  figcaption a {
+    color: $pop;
+    text-decoration: underline;
+  }
+
+  /* Captions ignore the mouse, but links inside become clickable once the
+     caption is visible */
+  &:hover figcaption a { pointer-events: auto; }
+
+  /* Keyboard users: show the caption when its link gets focus */
+  &:focus-within figcaption { opacity: 1; }
+}
+
+/* Touch screens have no hover: show illustration captions below the image
+   — scicomm.qmd only */
+@media (hover: none) {
+  .tile-wrap figcaption {
+    position: static;
+    opacity: 1;
+    background: none;
+    color: $dark;
+    padding: 0.5rem 0 0;
+  }
+
+  /* Caption links on the light background: coral, and tappable */
+  .tile-wrap figcaption a {
+    color: $secondary;
+    pointer-events: auto;
+  }
+}
+
+/* Single centered video (Video section) — scicomm.qmd only */
+.video-single {
+  max-width: 560px;
+  margin: 2em auto;
+}
+
+/* 16:9 responsive box around each YouTube embed — scicomm.qmd only */
 .video-tile {
-  position: relative;     
-  aspect-ratio: 16 / 9; 
+  position: relative;
+  aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
- 
+
   iframe, video {
     position: absolute;
     inset: 0;
@@ -235,71 +363,94 @@ blockquote {
     border: 0;
   }
 }
- 
-/* Video styling */
+
+/* Base style for all embedded videos (currently only scicomm.qmd) */
 video,
 iframe {
   max-width: 100%;
   display: block;
   border-radius: 0;
 }
- 
-/* Responsive video container  */
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 3rem auto;
-  aspect-ratio: 16 / 9;
- 
-  iframe, video {
+
+/* Home intro: photo left, text right — index.qmd only */
+.home-intro {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-right: 5rem;   /* empty space on the right, desktop only */
+}
+
+/* Keeps the portrait from shrinking in the flex row — index.qmd only */
+.home-intro .home-img {
+  flex-shrink: 0;
+}
+
+/* Right-click popup on images ("Want a high-res version?") — scicomm.qmd only.
+   Shown/hidden by toggling Bootstrap's .d-none class in the page script. */
+.img-popup {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  max-width: 90vw;
+  padding: 1rem 2.75rem 1rem 1.5rem;
+  background-color: $light;
+  border: 2px solid $pop;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba($dark, 0.25);
+  text-align: center;
+
+  p { margin: 0; }
+
+  .close-popup {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+    top: 0.25rem;
+    right: 0.6rem;
+    background: none;
     border: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $dark;
+    cursor: pointer;
+
+    &:hover, &:focus-visible { color: $secondary; }
   }
 }
- 
-/* Responsive Queries */
- 
-@media (min-width: 992px) {
-  nav.toc-sidebar { float: right; width: 220px; margin-left: 2rem; }
-  main.content { margin-right: 260px; }
-}
- 
+
+/* Mobile layout (≤ 768px) */
 @media (max-width: 768px) {
-  .video-container {
-    margin: 2rem auto;
+  /* index.qmd: stack photo above text, no empty space on the right */
+  .home-intro {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 0;
   }
-  .listing-item { flex-direction: column; align-items: center; }
-  .page-icon { display: none; }
-  
+
+  /* all pages: use the full width */
   main.content {
     margin: 0 !important;
-    padding: 0 15px;
+    padding: 1.5rem 15px 0;
     width: 100% !important;
   }
- 
+
+  /* all pages: no justified text on small screens */
   p {text-align: left !important; hyphens: auto;}
-  
-  [style*="float"] {
-    float: none !important;
-    width: 100% !important;
-    max-width: 400px !important;
-    margin: 0 auto 1.5rem !important;
-    display: block !important;
+
+  /* about.qmd: stack portrait above text */
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
- 
-  [style*="display:flex"], [style*="display: flex"] {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-  }
- 
-  .about-me-text, .about-me-img {
-    width: 100% !important;
-    max-width: 100% !important;
+
+  /* about.qmd: portrait up to 400px wide, centered */
+  .about-me-figure {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 400px;
   }
 }

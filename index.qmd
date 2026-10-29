@@ -10,11 +10,19 @@ include-after-body:
     </style>
 ---
 
-# Roberta Colapietro
+::: {.home-intro}
+<img src="img/main.png" class="home-img" alt="Portrait of Roberta Colapietro"/>
 
-<br>
+<!--Key message-->
+::: {.home-intro-text}
+# Hi, I'm [Roberta Colapietro]{.name-highlight}!
+<!--Short paragraph to explain the key message-->
+A [PhD student]{.role} in chronobiology, I study how our body's internal clock works and how it gets broken in disease. As a [medical doctor]{.role}, I hope to one day turn these findings into real improvements for patients. In the meantime, as a [science communicator]{.role}, I strive to make the science of our internal clock accessible to everyone, with a dash of color and a pinch of fun.
 
-<img src="img/main.png" style="width: 40%; aspect-ratio: 1 / 1; border-radius: 50%; float: left; margin-right: 40px;"/>
+<!--Mission statement-->
+## Stick around for some science around the clock  🕖
 
-I am a PhD student at the [Charité Medical University](https://www.charite.de/en/) where I explore how cells keep track of time in health and disease. <br><br>
-I also love make this (and other) research topics accessible to the public through a variety of science outreach formats. <br><br> 
+:::
+:::
+
+<!--Summary of the different sections: TO ADD-->

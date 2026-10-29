@@ -1,6 +1,6 @@
 ---
 pagetitle: "Roberta Colapietro | 404"
-image: assets/img/brush.png
+image: img/brush.png
 ---
 <br>
 [Uh oh!]{.h1 style="font-size:2em"}
